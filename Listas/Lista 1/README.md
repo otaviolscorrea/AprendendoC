@@ -1,1 +1,1 @@
-Lista de Ex de Prog 1
+Lista de Exercicios avaliativa com valor de 5 pts.
