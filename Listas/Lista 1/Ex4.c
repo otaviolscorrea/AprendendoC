@@ -6,7 +6,7 @@ int main()
     int nota, acumulaNota = 0, i = 1, j = 1;
     float media, acumulaMedia, mediaTurma;
 
-    for (i; i < 3; i++)
+    for (i; i < 41; i++)
     {
         printf("##########   %d Aluno   ###########\n", i);
         for (j; j < 5; j++)
