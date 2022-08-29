@@ -7,11 +7,11 @@ int main()
 
     do
     {
-        printf("Digite dois numeros inteiros: \n");
+        printf("\nDigite dois numeros inteiros:\n");
         scanf("%d", &num1);
         scanf("%d", &num2);
     }
     while (num1 != num2);
-    printf("Os numeros digitados foram iguais");
+    printf("Os numeros digitados foram iguais\n");
     return 0;
 }
