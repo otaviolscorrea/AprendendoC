@@ -10,8 +10,7 @@ int main()
         printf("\nDigite dois numeros inteiros:\n");
         scanf("%d", &num1);
         scanf("%d", &num2);
-    }
-    while (num1 != num2);
-    printf("Os numeros digitados foram iguais\n");
+    } while (num1 != num2);
+    printf("Os numeros digitados foram iguais\n\n\n");
     return 0;
 }
