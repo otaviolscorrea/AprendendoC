@@ -4,38 +4,39 @@
 
 int main()
 {
-    int fatorial = 1, termo;
-    int i, f, n, seno, somar = 1;
+    int i, f, n, x, somar = 1;
+    float termo, seno, fatorial = 1.0;
 
-    printf("Digite o valor de x (seno): ");
-    scanf("%d", &seno);
-    printf("Digite o valor de n (Ate onde vai a seguencia): ");
-    scanf("%d", &n);
+    printf("Digite o valor de x: ");
+    scanf("%d", &x);
+    //printf("Digite o valor de n (Ate onde vai a seguencia): ");
+    //scanf("%d", &n);
+    
+    seno = x;
 
-    for (i = 1; i <= n; i += 2)
+    for (i = 1; i <= 5; i += 2)
     {
         termo = pow(x, i);
-        fatorial = 1;
-        for (f = 1; f < i; f++)
+        for (f = 1; f <= i; f++)
         {
-            fatorial *= f;
+            fatorial = fatorial * f;
+        }
+
+        termo /= fatorial;
+
+        if (somar == 1)
+        {
+            seno -= termo;
+            somar = 0;
+        }
+        else
+        {
+            seno += termo;
+            somar = 1;
         }
     }
 
-    termo /= fatorial;
-
-    if (somar == 1)
-    {
-        seno += termo;
-        somar = 0;
-    }
-    else
-    {
-        seno -= termo;
-        somar = 1;
-    }
-
-    printf("\n %.2f\n", seno);
+    printf("\n Sen(x): %.2f\n", seno);
 
     return 0;
 }
