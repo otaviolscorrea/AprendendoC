@@ -1,47 +1,33 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int main()
 {
-    int opcGen, contMas = 0, contFem = 0, contNaoB = 0, contOutros = 0, i = 0;
+    int contMas = 0, contFem = 0, contNaoB = 0, contOutros = 0, i;
+    char opGen;
 
-    for (i; i < 30; i++)
+    for (i = 0; i < 30; i++)
     {
-        system("cls");
-        printf("Digite:\n 1 - Masculino \n 2 - Feminino \n 3 - Nao Binario \n 4 - Outro \n * Selecione a Opcao: ");
-        scanf("%d", &opcGen);
+        printf("\n\nDigite:\n M - Masculino \n F - Feminino \n N - Nao Binario \n O - Outro \n * Selecione a Opcao: ");
+        scanf("%c", &opGen);
+        fflush(stdin);
 
-        while (opcGen != 1 && opcGen != 2 && opcGen != 3 && opcGen != 4)
+        if (opGen == 'M' || opGen == 'm')
         {
-            printf("Opcao invalida, Digite novamente: ");
-            scanf("%d", &opcGen);
+            contMas++;
         }
-        while (opcGen == 1 || opcGen == 2 || opcGen == 3 || opcGen == 4)
+        else if (opGen == 'F' || opGen == 'f')
         {
-            if (opcGen == 1)
-            {
-                contMas++;
-
-                break;
-            }
-            else if (opcGen == 2)
-            {
-                contFem++;
-
-                break;
-            }
-            else if (opcGen == 3)
-            {
-                contNaoB++;
-
-                break;
-            }
-            else
-            {
-                contOutros++;
-
-                break;
-            }
+            contFem++;
+        }
+        else if (opGen == 'N' || opGen == 'n')
+        {
+            contNaoB++;
+        }
+        else if (opGen == 'O' || opGen == 'o')
+        {
+            contOutros++;
         }
     }
     printf("\n-----------|   Masculino: %d        |-----------\n", contMas);

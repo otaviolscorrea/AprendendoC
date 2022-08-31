@@ -7,11 +7,9 @@ int main()
     int contMas = 0, contFem = 0, contNaoB = 0, contOutros = 0;
     char opcGenero;
 
-    int d = 0;
-
     do
     {
-        printf("Digite:\n M - Masculino \n F - Feminino \n N - Nao Binario \n O - Outro \n * Selecione a Opcao: ");
+        printf("\n\nDigite:\n M - Masculino \n F - Feminino \n N - Nao Binario \n O - Outro \n * Selecione a Opcao: ");
         scanf("%c", &opcGenero);
 
         if (opcGenero == 'M' || opcGenero == 'm')
