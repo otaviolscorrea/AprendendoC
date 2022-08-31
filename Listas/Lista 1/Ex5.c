@@ -2,19 +2,17 @@
 
 int main()
 {
-    int n, j;
-    float t = 1.0, s, x;
+    int n, i = 1;
+    float t = 1.0, s = 1.0, x;
 
     printf("Digite o valor de x: ");
     scanf("%f", &x);
     printf("\nDigite o valor de n: ");
     scanf("%d", &n);
-    
-    s = t;
 
-    for (j = 1; j <= n; j++)
+    for (i; i <= n; i++)
     {
-        t = (t / j) * x;
+        t = (t / i) * x;
         s = s + t;
     }
 
