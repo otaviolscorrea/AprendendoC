@@ -3,34 +3,34 @@
 
 int main()
 {
-    int opcGenero, contMas = 0, contFem = 0, contNaoB = 0, contOutros = 0, i = 0;
+    int opcGen, contMas = 0, contFem = 0, contNaoB = 0, contOutros = 0, i = 0;
 
     for (i; i < 30; i++)
     {
         system("cls");
         printf("Digite:\n 1 - Masculino \n 2 - Feminino \n 3 - Nao Binario \n 4 - Outro \n * Selecione a Opcao: ");
-        scanf("%d", &opcGenero);
+        scanf("%d", &opcGen);
 
-        while (opcGenero != 1 && opcGenero != 2 && opcGenero != 3 && opcGenero != 4)
+        while (opcGen != 1 && opcGen != 2 && opcGen != 3 && opcGen != 4)
         {
             printf("Opcao invalida, Digite novamente: ");
-            scanf("%d", &opcGenero);
+            scanf("%d", &opcGen);
         }
-        while (opcGenero == 1 || opcGenero == 2 || opcGenero == 3 || opcGenero == 4)
+        while (opcGen == 1 || opcGen == 2 || opcGen == 3 || opcGen == 4)
         {
-            if (opcGenero == 1)
+            if (opcGen == 1)
             {
                 contMas++;
 
                 break;
             }
-            else if (opcGenero == 2)
+            else if (opcGen == 2)
             {
                 contFem++;
 
                 break;
             }
-            else if (opcGenero == 3)
+            else if (opcGen == 3)
             {
                 contNaoB++;
 

@@ -4,7 +4,7 @@
 
 int main()
 {
-    int contMas = 0, contFem = 0, contNaoB = 0, contOutros = 0, contErros = 0;
+    int contMas = 0, contFem = 0, contNaoB = 0, contOutros = 0;
     char opcGenero;
 
     int d = 0;
