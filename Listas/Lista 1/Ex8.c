@@ -3,7 +3,7 @@
 
 int main()
 {
-    int opcSelecionada;
+    int opcSel;
     float saldoInicial, saldo, saque, deposito;
     printf("Digite o saldo inicial da conta: R$ ");
     scanf("%f", &saldoInicial);
@@ -11,36 +11,40 @@ int main()
     saldo = saldoInicial;
 
     printf("Digite:\n 1 - Deposito \n 2 - Saque \n 3 - Fim \n * Selecione a Opcao: ");
-    scanf("%d", &opcSelecionada);
+    scanf("%d", &opcSel);
 
-    while (opcSelecionada != 1 && opcSelecionada != 2 && opcSelecionada != 3)
+    while (opcSel != 1 && opcSel != 2 && opcSel != 3)
     {
         printf("Opcao invalida, Digite novamente: ");
-        scanf("%d", &opcSelecionada);
+        scanf("%d", &opcSel);
     }
-    while (opcSelecionada == 1 || opcSelecionada == 2 || opcSelecionada == 3)
+    while (opcSel == 1 || opcSel == 2 || opcSel == 3)
     {
-        if (opcSelecionada == 1)
+        if (opcSel == 1)
         {
             printf("Qual o valor para deposito: R$ ");
             scanf("%f", &deposito);
             saldo += deposito;
-            printf("Novo saldo: R$ %.2f\n", saldo);
-            break;
+            system("cls");
+            printf("Novo saldo: R$ %.2f\n\n", saldo);
+            printf("Efetuar outra opercao:\n 1 - Deposito \n 2 - Saque \n 3 - Fim \n * Selecione a Opcao: ");
+            scanf("%d", &opcSel);
         }
-        else if (opcSelecionada == 2)
+        else if (opcSel == 2)
         {
             printf("Qual o valor para saque: R$ ");
             scanf("%f", &saque);
             saldo += -(saque);
-            printf("Novo saldo: R$ %.2f\n", saldo);
-
-            break;
+            system("cls");
+            printf("Novo saldo: R$ %.2f\n\n", saldo);
+            printf("Efetuar outra opercao:\n 1 - Deposito \n 2 - Saque \n 3 - Fim \n * Selecione a Opcao: ");
+            scanf("%d", &opcSel);
         }
-        else if (opcSelecionada == 3)
+        else if (opcSel == 3)
         {
             break;
         }
     }
+    printf("\n\nSaldo final: R$ %.2f\n\n", saldo);
     return 0;
 }
