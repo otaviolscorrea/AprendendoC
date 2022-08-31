@@ -3,7 +3,7 @@
 
 int main()
 {
-    int idade, soma = 0, i = 0;
+    int idade, somar = 0, i = 0;
     float mediaIdade;
 
     while (idade != -1)
@@ -13,12 +13,12 @@ int main()
 
         if (idade != -1)
         {
-            soma += idade;
+            somar += idade;
             i++;
         }
     }
 
-    mediaIdade = (float)soma / i;
+    mediaIdade = (float)somar / i;
     printf("A media das idades eh: %.2f\n", mediaIdade);
 
     return 0;
