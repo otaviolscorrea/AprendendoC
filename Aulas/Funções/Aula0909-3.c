@@ -22,7 +22,7 @@ int x1(int a, int b, int c, int delta)
     }
     else
     {
-        printf("Nao existem raizes reais");
+        x1 = 0;
     }
     return x1;
 }
@@ -41,7 +41,7 @@ int x2(int a, int b, int c, int delta)
     }
     else
     {
-        printf("Nao existem raizes reais");
+        x2 = 0;
     }
     return x2;
 }
@@ -58,8 +58,14 @@ int main()
 
     rx1 = x1(a, b, c, delta);
     rx2 = x2(a, b, c, delta);
-
-    printf("\nAs raizes sao: x = %d, x' = %d\n", rx1, rx2);
+    if (rx1 == 0 || rx2 == 0)
+    {
+        printf("X nao tem valores reais");
+    }
+    else
+    {
+        printf("\nAs raizes sao: x = %d, x' = %d\n", rx1, rx2);
+    }
 
     return 0;
 }
