@@ -4,7 +4,7 @@
 
 int funDelta(int a, int b, int c, int delta)
 {
-    delta = (b * b - 4 * a * c);
+    delta = (b * b)-( 4 * a * c);
     return delta;
 }
 
@@ -14,7 +14,7 @@ int x1(int a, int b, int c, int delta)
     rdelta = funDelta(a, b, c, delta);
     if (rdelta > 0)
     {
-        x1 = (-b + sqrt((double)rdelta)) / (2 * a);
+        x1 = (-b + sqrt(rdelta)) / (2 * a);
     }
     else if (rdelta == 0)
     {
@@ -33,7 +33,7 @@ int x2(int a, int b, int c, int delta)
     rdelta = funDelta(a, b, c, delta);
     if (delta > 0)
     {
-        x2 = (-b - sqrt((double)rdelta)) / (2 * a);
+        x2 = (-b - sqrt(rdelta)) / (2 * a);
     }
     else if (rdelta == 0)
     {
@@ -60,11 +60,15 @@ int main()
     rx2 = x2(a, b, c, delta);
     if (rx1 == 0 || rx2 == 0)
     {
-        printf("X nao tem valores reais");
+        printf("\n(Delta Negativo) X nao tem valores reais\n\n");
+    }
+    else if (rx1 == rx2)
+    {
+        printf("\n(Delta = 0) X e X' sao iguais: %d\n\n", rx1);
     }
     else
     {
-        printf("\nAs raizes sao: x = %d, x' = %d\n", rx1, rx2);
+        printf("\nAs raizes sao: X = %d, X' = %d\n\n", rx1, rx2);
     }
 
     return 0;
