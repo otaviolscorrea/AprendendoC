@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define TAM 2
+#define TAM 10
 int main()
 {
     int i, vetorX[TAM], vetorY[TAM], vetorR[TAM];
