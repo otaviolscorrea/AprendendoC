@@ -21,7 +21,7 @@ int main()
         if (vetor[i] > maior)
         {
             maior = vetor[i];
-            posMenor = i;
+            posMaior = i;
         }
     }
     printf("\nO menor valor do vetor eh: %d  -- Posicao: %d", menor, posMenor);
