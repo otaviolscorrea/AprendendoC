@@ -4,8 +4,8 @@
 int contaimpar(int n1, int n2)
 {
     int inicio, fim, i, cont = 0;
-    
-    if (n2 > n1)
+
+    if (n2 < n1)
     {
         inicio = n2;
         fim = n1;
@@ -23,6 +23,7 @@ int contaimpar(int n1, int n2)
             cont++;
         }
     }
+
     return cont;
 }
 
@@ -37,7 +38,7 @@ int main()
 
     impares = contaimpar(n1, n2);
 
-    printf("\nO numero de impares no intervalo eh: %d\n", impares);
+    printf("\nO numero de impares no intervalo eh: %d\n\n", impares);
 
     return 0;
 }
