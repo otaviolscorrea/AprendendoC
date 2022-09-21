@@ -3,19 +3,23 @@
 #include <time.h>
 #define MAX 100000
 
+// Criando a função do dado
+
 int dado()
 {
     int dado;
     dado = rand() % 6 + 1;
-
     return dado;
 }
+
+// Criando a função principal
 int main(int argc, char const *argv[])
 {
+    // Declaração de Variaveis
     int i, rdado[MAX];
     int c1 = 0, c2 = 0, c3 = 0, c4 = 0, c5 = 0, c6 = 0;
     float r1, r2, r3, r4, r5, r6;
-    
+
     // Definindo o Srand
     srand(time(NULL));
 
@@ -24,7 +28,7 @@ int main(int argc, char const *argv[])
     {
         rdado[i] = dado();
     }
-    
+
     // Lendo o vetor e anotando os numeros que sairam.
     for (i = 0; i < MAX; i++)
     {
@@ -54,6 +58,7 @@ int main(int argc, char const *argv[])
         }
     }
 
+    // Calculando os Resultados
     r1 = ((float)c1 / MAX) * 100;
     r2 = ((float)c2 / MAX) * 100;
     r3 = ((float)c3 / MAX) * 100;
@@ -61,13 +66,14 @@ int main(int argc, char const *argv[])
     r5 = ((float)c5 / MAX) * 100;
     r6 = ((float)c6 / MAX) * 100;
 
-    printf("\n     Porcentagem de cada numero:       \n");
-    printf("\nNumero 1: %.2f", r1);
-    printf("\nNumero 2: %.2f", r2);
-    printf("\nNumero 3: %.2f", r3);
-    printf("\nNumero 4: %.2f", r4);
-    printf("\nNumero 5: %.2f", r5);
-    printf("\nNumero 6: %.2f", r6);
+    // Printando para o Usuario
+    printf("\nPorcentagem de cada numero:\n");
+    printf("\nNumero 1: %.2f %%", r1);
+    printf("\nNumero 2: %.2f %%", r2);
+    printf("\nNumero 3: %.2f %%", r3);
+    printf("\nNumero 4: %.2f %%", r4);
+    printf("\nNumero 5: %.2f %%", r5);
+    printf("\nNumero 6: %.2f %%\n\n", r6);
 
     return 0;
 }
