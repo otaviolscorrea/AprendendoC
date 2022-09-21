@@ -1,20 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#define MAX 10
+#define count 10
 
 void imprimir();
 
 int main(int argc, char const *argv[])
 {
     // Declarando variaveis
-    int i, numeros[MAX];
+    int i, numeros[count];
 
     // Definindo o Srand
     srand(time(NULL));
 
     // Sorteando numeros
-    for (i = 0; i < MAX; i++)
+    for (i = 0; i < count; i++)
     {
         numeros[i] = rand() % 10 + 10;
     }
@@ -30,7 +30,7 @@ void imprimir(int numeros[])
 
     printf("Numeros sorteados:");
 
-    for (i = 0; i < MAX; i++)
+    for (i = 0; i < count; i++)
     {
         printf("\nNumero %d: %d", i + 1, numeros[i]);
     }
