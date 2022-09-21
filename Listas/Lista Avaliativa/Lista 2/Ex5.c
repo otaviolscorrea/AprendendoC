@@ -5,11 +5,11 @@
 
 void notas(int notas1[], int notas2[], int i)
 {
-    printf(" Digite a nota 1 do %d aluno: ", i + 1);
+    printf("\n     Aluno %d\n", i + 1);
+    printf("Digite a 1 nota: ");
     scanf("%d", &notas1[i]);
-    printf(" Digite a nota 2 do %d aluno: ", i + 1);
+    printf("Digite a 2 nota: ");
     scanf("%d", &notas2[i]);
-    printf("\n");
 }
 
 void media(int notas1[], int notas2[], float mediaNotas[], int i)
@@ -43,6 +43,7 @@ int main(int argc, char const *argv[])
     {
         imprimirMedias(mediaNotas, i);
     }
+    printf("\n\n");
 
     return 0;
 }
