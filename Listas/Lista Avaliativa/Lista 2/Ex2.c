@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#define MAX 100000
+#define count 100000
 
 // Criando a função do dado
 
@@ -16,7 +16,7 @@ int dado()
 int main(int argc, char const *argv[])
 {
     // Declaração de Variaveis
-    int i, rdado[MAX];
+    int i, rdado[count];
     int c1 = 0, c2 = 0, c3 = 0, c4 = 0, c5 = 0, c6 = 0;
     float r1, r2, r3, r4, r5, r6;
 
@@ -24,13 +24,13 @@ int main(int argc, char const *argv[])
     srand(time(NULL));
 
     // Rodando o Dado
-    for (i = 0; i < MAX; i++)
+    for (i = 0; i < count; i++)
     {
         rdado[i] = dado();
     }
 
     // Lendo o vetor e anotando os numeros que sairam.
-    for (i = 0; i < MAX; i++)
+    for (i = 0; i < count; i++)
     {
         if (rdado[i] == 1)
         {
@@ -59,12 +59,12 @@ int main(int argc, char const *argv[])
     }
 
     // Calculando os Resultados
-    r1 = ((float)c1 / MAX) * 100;
-    r2 = ((float)c2 / MAX) * 100;
-    r3 = ((float)c3 / MAX) * 100;
-    r4 = ((float)c4 / MAX) * 100;
-    r5 = ((float)c5 / MAX) * 100;
-    r6 = ((float)c6 / MAX) * 100;
+    r1 = ((float)c1 / count) * 100;
+    r2 = ((float)c2 / count) * 100;
+    r3 = ((float)c3 / count) * 100;
+    r4 = ((float)c4 / count) * 100;
+    r5 = ((float)c5 / count) * 100;
+    r6 = ((float)c6 / count) * 100;
 
     // Printando para o Usuario
     printf("\nPorcentagem de cada numero:\n");
