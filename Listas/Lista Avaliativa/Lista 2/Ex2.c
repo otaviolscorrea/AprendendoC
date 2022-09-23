@@ -4,7 +4,6 @@
 #define count 100000
 
 // Criando a função do dado
-
 int dado()
 {
     int dado;

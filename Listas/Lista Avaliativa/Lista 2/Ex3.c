@@ -3,8 +3,10 @@
 #include <time.h>
 #define count 10
 
+// Declarando um cabeçario de função para a main conhecer
 void imprimir();
 
+// Criando a função principal
 int main(int argc, char const *argv[])
 {
     // Declarando variaveis
