@@ -3,7 +3,7 @@
 #include <time.h>
 #define count 100000
 
-// Criando a função do dado
+// Criando a função do dado.
 int dado()
 {
     int dado;
@@ -11,18 +11,18 @@ int dado()
     return dado;
 }
 
-// Criando a função principal
+// Criando a função principal.
 int main(int argc, char const *argv[])
 {
-    // Declaração de Variaveis
+    // Declaração de Variaveis.
     int i, rdado[count];
     int c1 = 0, c2 = 0, c3 = 0, c4 = 0, c5 = 0, c6 = 0;
     float r1, r2, r3, r4, r5, r6;
 
-    // Definindo o Srand
+    // Definindo o Srand.
     srand(time(NULL));
 
-    // Rodando o Dado
+    // Rodando o Dado.
     for (i = 0; i < count; i++)
     {
         rdado[i] = dado();
@@ -57,7 +57,7 @@ int main(int argc, char const *argv[])
         }
     }
 
-    // Calculando os Resultados
+    // Calculando os Resultados.
     r1 = ((float)c1 / count) * 100;
     r2 = ((float)c2 / count) * 100;
     r3 = ((float)c3 / count) * 100;
@@ -65,7 +65,7 @@ int main(int argc, char const *argv[])
     r5 = ((float)c5 / count) * 100;
     r6 = ((float)c6 / count) * 100;
 
-    // Printando para o Usuario
+    // Printando para o Usuario.
     printf("\nPorcentagem de cada numero:\n");
     printf("\nNumero 1: %.2f %%", r1);
     printf("\nNumero 2: %.2f %%", r2);

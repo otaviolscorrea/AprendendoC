@@ -3,19 +3,19 @@
 #include <time.h>
 #define count 10
 
-// Declarando um cabeçario de função para a main conhecer
+// Declarando um cabeçario de função para a main conhecer.
 void imprimir();
 
-// Criando a função principal
+// Criando a função principal.
 int main(int argc, char const *argv[])
 {
-    // Declarando variaveis
+    // Declarando variaveis.
     int i, numeros[count];
 
-    // Definindo o Srand
+    // Definindo o Srand.
     srand(time(NULL));
 
-    // Sorteando numeros
+    // Sorteando numeros.
     for (i = 0; i < count; i++)
     {
         numeros[i] = rand() % 10 + 10;
@@ -25,7 +25,7 @@ int main(int argc, char const *argv[])
     return 0;
 }
 
-// Criando uma funçao para imprimir os numeros
+// Criando uma funçao para imprimir os numeros.
 void imprimir(int numeros[])
 {
     int i;

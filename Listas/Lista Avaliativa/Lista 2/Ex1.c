@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Criando a Função que vai contar quantos numeros impares no intervalo
+// Criando a Função que vai contar quantos numeros impares no intervalo.
 int contaimpar(int n1, int n2)
 {
     int inicio, fim, i, cont = 0;
@@ -28,7 +28,7 @@ int contaimpar(int n1, int n2)
     return cont;
 }
 
-// Criando a função principal
+// Criando a função principal.
 int main()
 {
     int n1, n2, impares;

@@ -2,16 +2,16 @@
 #include <stdlib.h>
 #include <time.h>
 
-// Criando programa
+// Criando programa.
 int main(int argc, char const *argv[])
 {
-    // Declarando variaveis
+    // Declarando variaveis.
     int i, j, mult, matriz[3][6];
     
-    // Definindo o Srand
+    // Definindo o Srand.
     srand(time(NULL));
     
-    // Gerando matriz Semialeatoria
+    // Gerando matriz Semialeatoria.
     for (i = 0; i < 3; i++)
     {
         for (j = 0; j < 6; j++)
@@ -21,7 +21,7 @@ int main(int argc, char const *argv[])
     }
     printf("\n");
     
-    // Printando para o Usuario a matriz que foi gerada
+    // Printando para o Usuario a matriz que foi gerada.
     for (i = 0; i < 3; i++)
     {
         for (j = 0; j < 6; j++)
@@ -32,11 +32,11 @@ int main(int argc, char const *argv[])
     }
     printf("\n");
     
-    // Solicitando o numero multiplicador
+    // Solicitando o numero multiplicador.
     printf("Digite o valor para multiplicacao: ");
     scanf("%d", &mult);
     
-    // Executando a multiplicação de todos elemento pelo numero escolhido
+    // Executando a multiplicação de todos elemento pelo numero escolhido.
     for (i = 0; i < 3; i++)
     {
         for (j = 0; j < 6; j++)

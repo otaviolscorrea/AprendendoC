@@ -8,7 +8,7 @@ int main(int argc, char const *argv[])
     // Declaração de vetores e variaveis.
     int i, vetorX[count], vetorY[count], vetorR[count];
 
-    // Atribuindo valores aos vetores
+    // Atribuindo valores aos vetores.
     for (i = 0; i < count; i++)
     {
         printf("Digite o valor %d numero do vetor X: ", i + 1);
@@ -23,13 +23,13 @@ int main(int argc, char const *argv[])
         scanf("%d", &vetorY[i]);
     }
 
-    // Multiplicando vetorX por VetorY e armazenando no vetorR
+    // Multiplicando vetorX por VetorY e armazenando no vetorR.
     for (i = 0; i < count; i++)
     {
         vetorR[i] = vetorX[i] * vetorY[i];
     }
 
-    // Imprimindo os valores do VetorR
+    // Imprimindo os valores do VetorR.
     printf("\nResultados: ");
     for (i = 0; i < count; i++)
     {
