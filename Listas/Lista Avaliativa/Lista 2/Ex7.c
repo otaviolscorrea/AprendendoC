@@ -26,7 +26,7 @@ int main(int argc, char const *argv[])
     {
         for (j = 0; j < 6; j++)
         {
-            printf("%d ", matriz[i][j]);
+            printf("%d  ", matriz[i][j]);
         }
         printf("\n");
     }
@@ -50,7 +50,7 @@ int main(int argc, char const *argv[])
     {
         for (j = 0; j < 6; j++)
         {
-            printf("%d ", matriz[i][j]);
+            printf("%d  ", matriz[i][j]);
         }
         printf("\n");
     }

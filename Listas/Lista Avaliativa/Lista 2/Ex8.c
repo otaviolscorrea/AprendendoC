@@ -72,15 +72,15 @@ int main(int argc, char const *argv[])
     }
 
     // Printando a menor linha.
-    printf("\nMenor Linha: %d\n", menorLinha);
+    printf("\nMenor Linha: %d\n", menorLinha+1);
     for (i = 0; i < count; i++)
     {
-        printf("%d ", matriz[menorLinha][i]);
+        printf("%d  ", matriz[menorLinha][i]);
     }
     printf("\n");
 
     // Printando a maior coluna.
-    printf("\nMaior coluna: %d\n", maiorColuna);
+    printf("\nMaior coluna: %d\n", maiorColuna+1);
     for (i = 0; i < count; i++)
     {
         printf("%d\n", matriz[i][maiorColuna]);
