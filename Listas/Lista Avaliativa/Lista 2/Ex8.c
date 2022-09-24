@@ -34,7 +34,7 @@ int main(int argc, char const *argv[])
     }
 
     // Verificando qual linha é a menor linha
-    printf("\nSoma das linhas: \n");
+    // printf("\nSoma das linhas: \n");
     for (i = 0; i < count; i++)
     {
         somaL = 0;
@@ -47,12 +47,11 @@ int main(int argc, char const *argv[])
             menorLinha = i;
             menorL = somaL;
         }
-        printf("Soma linha %d: %d\n", i, somaL);
+        // printf("Soma linha %d: %d\n", i, somaL);
     }
 
-    printf("\nSoma das colunas: \n");
-
     // Verificando qual coluna é a menor
+    // printf("\nSoma das colunas: \n");
     for (i = 0; i < count; i++)
     {
         somaC = 0;
@@ -65,12 +64,11 @@ int main(int argc, char const *argv[])
             maiorC = somaC;
             maiorColuna = i;
         }
-        printf("Soma coluna %d: %d\n", i, somaC);
+        // printf("Soma coluna %d: %d\n", i, somaC);
     }
 
     // Printando a menor linha
     printf("\nMenor Linha: %d\n", menorLinha);
-
     for (i = 0; i < count; i++)
     {
         printf("%d ", matriz[menorLinha][i]);
@@ -79,7 +77,6 @@ int main(int argc, char const *argv[])
 
     // Printando a maior coluna
     printf("\nMaior coluna: %d\n", maiorColuna);
-
     for (i = 0; i < count; i++)
     {
         printf("%d\n", matriz[i][maiorColuna]);
