@@ -88,35 +88,24 @@ void multColuna(int matriz[][count])
 
 void somaDiaPrincipal(int matriz[][count])
 {
-    int i, j, soma = 0;
+    int i, soma = 0;
 
     for (i = 0; i < count; i++)
     {
-        for (j = 0; j < count; j++)
-        {
-            if (i == j)
-            {
-                soma += matriz[i][j];
-            }
-        }
+        soma += matriz[i][i];
     }
     printf("A soma dos valores eh: %d\n\n", soma);
 }
 
 void multDiaPrincipal(int matriz[][count])
 {
-    int i, j, mult = 0;
+    int i, mult = 0;
 
     for (i = 0; i < count; i++)
     {
-        for (j = 0; j < count; j++)
-        {
-            if (i == j)
-            {
-                mult *= matriz[i][j];
-            }
-        }
+        mult *= matriz[i][i];
     }
+
     printf("A multiplicacao dos valores eh: %d\n\n", mult);
 }
 
@@ -126,12 +115,9 @@ void somaDiaSecondaria(int matriz[][count])
 
     for (i = 0; i < count; i++)
     {
-        for (j = count; j < 0; j--)
+        for (j = count; j > 0; j--)
         {
-            if (i == j)
-            {
-                soma += matriz[i][j];
-            }
+            soma += matriz[i][j];
         }
     }
     printf("A soma dos valores eh: %d\n\n", soma);
@@ -143,12 +129,9 @@ void multDiaSecondaria(int matriz[][count])
 
     for (i = 0; i < count; i++)
     {
-        for (j = count; j < 0; j--)
+        for (j = count; j > 0; j--)
         {
-            if (i == j)
-            {
-                mult *= matriz[i][j];
-            }
+            mult *= matriz[i][j];
         }
     }
     printf("A multiplicacao dos valores eh: %d\n\n", mult);
@@ -164,7 +147,7 @@ int main(int argc, char const *argv[])
 
     do
     {
-        printf("\n================================\n");
+        printf("\n=================================\n");
         printf("               Menu             \n");
         printf("   Somar                    <1> \n");
         printf("   Multiplicar              <2> \n");
@@ -173,7 +156,8 @@ int main(int argc, char const *argv[])
         printf("   Borda externa            <5> \n");
         printf("   Quadrado interno         <6> \n");
         printf("   Imprimir a matriz        <7> \n");
-        printf("================================\n");
+        printf("              Sair          <8> \n");
+        printf("=================================\n");
         scanf("%d", &index);
         system("cls");
         switch (index)
@@ -189,11 +173,6 @@ int main(int argc, char const *argv[])
             {
                 somaColuna(matriz);
             }
-            else
-            {
-                printf("Opcao Invalida");
-            }
-
             break;
         case 2:
             printf("\n1-Linha\n2-Coluna\nQual opcao: ");
@@ -205,10 +184,6 @@ int main(int argc, char const *argv[])
             if (opcao == 2)
             {
                 multColuna(matriz);
-            }
-            else
-            {
-                printf("Opcao Invalida");
             }
             break;
         case 3:
@@ -222,10 +197,6 @@ int main(int argc, char const *argv[])
             {
                 multDiaPrincipal(matriz);
             }
-            else
-            {
-                printf("Opcao Invalida");
-            }
             break;
         case 4:
             printf("\n1-Soma\n2-Multiplicacao\nQual opcao: ");
@@ -238,10 +209,6 @@ int main(int argc, char const *argv[])
             {
                 multDiaSecondaria(matriz);
             }
-            else
-            {
-                printf("Opcao Invalida");
-            }
             break;
         case 5:
 
@@ -250,7 +217,7 @@ int main(int argc, char const *argv[])
 
             break;
         case 7:
-
+            imprimirMatriz(matriz);
             break;
         default:
 
