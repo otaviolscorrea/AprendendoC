@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 #define count 4
 
 void lerMatriz(int matriz[][count])
@@ -201,7 +200,6 @@ void multBordaInt(int matriz[][count])
 int main(int argc, char const *argv[])
 {
     int matriz[count][count], index = 0, opcao;
-    srand(time(NULL));
 
     lerMatriz(matriz);
     imprimirMatriz(matriz);
