@@ -10,8 +10,7 @@ void lerMatriz(int matriz[][count])
     {
         for (j = 0; j < count; j++)
         {
-            printf("Posicao i: %d j: %d: ", i, j);
-            scanf("%d", &matriz[i][j]);
+            matriz[i][j] = rand() % 10;
         }
     }
 }
@@ -19,14 +18,29 @@ void lerMatriz(int matriz[][count])
 void imprimirMatriz(int matriz[][count])
 {
     int i, j;
+    printf("[");
     for (i = 0; i < count; i++)
     {
         for (j = 0; j < count; j++)
         {
-            printf("%d  ", matriz[i][j]);
+            printf("%d", matriz[i][j]);
+            if (j < 3)
+            {
+                printf(",");
+            }
         }
-        printf("\n");
+        if (i < 3)
+        {
+            printf(",");
+            printf("\n");
+        }
+        if (i>-1 && i<3)
+        {
+            printf(" ");
+        }
+        
     }
+    printf("]");
 }
 
 void somaLinha(int matriz[][count])
