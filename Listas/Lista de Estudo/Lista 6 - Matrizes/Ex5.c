@@ -113,26 +113,20 @@ void somaDiaSecondaria(int matriz[][count])
 {
     int i, j, soma = 0;
 
-    for (i = 0; i < count; i++)
+    for (i = 0, j = count - 1; i < count, j >= 0; i++, j--)
     {
-        for (j = count; j > 0; j--)
-        {
-            soma += matriz[i][j];
-        }
+        soma += matriz[i][j];
     }
     printf("A soma dos valores eh: %d\n\n", soma);
 }
 
 void multDiaSecondaria(int matriz[][count])
 {
-    int i, j, mult = 0;
+    int i, j, mult = 1;
 
-    for (i = 0; i < count; i++)
+    for (i = 0, j = count - 1; i < count, j >= 0; i++, j--)
     {
-        for (j = count; j > 0; j--)
-        {
-            mult *= matriz[i][j];
-        }
+        mult *= matriz[i][j];
     }
     printf("A multiplicacao dos valores eh: %d\n\n", mult);
 }
@@ -163,7 +157,7 @@ int main(int argc, char const *argv[])
         switch (index)
         {
         case 1:
-            printf("\n1-Linha\n2-Coluna\nQual opcao: ");
+            printf("1-Linha\n2-Coluna\nQual opcao: ");
             scanf("%d", &opcao);
             if (opcao == 1)
             {
@@ -175,7 +169,7 @@ int main(int argc, char const *argv[])
             }
             break;
         case 2:
-            printf("\n1-Linha\n2-Coluna\nQual opcao: ");
+            printf("1-Linha\n2-Coluna\nQual opcao: ");
             scanf("%d", &opcao);
             if (opcao == 1)
             {
@@ -187,7 +181,7 @@ int main(int argc, char const *argv[])
             }
             break;
         case 3:
-            printf("\n1-Soma\n2-Multiplicacao\nQual opcao: ");
+            printf("1-Soma\n2-Multiplicacao\nQual opcao: ");
             scanf("%d", &opcao);
             if (opcao == 1)
             {
@@ -199,7 +193,7 @@ int main(int argc, char const *argv[])
             }
             break;
         case 4:
-            printf("\n1-Soma\n2-Multiplicacao\nQual opcao: ");
+            printf("1-Soma\n2-Multiplicacao\nQual opcao: ");
             scanf("%d", &opcao);
             if (opcao == 1)
             {
