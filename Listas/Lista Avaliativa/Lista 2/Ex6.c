@@ -7,15 +7,17 @@
 void strinv(char str[])
 {
     // Declarando variaveis a serem utilidadas no processo de inverter a string.
-    int count, i;
-    count = strlen(str);
+    int i, n = strlen(str), j = n - 1;
+    char strInv[n];
 
-    printf("\nString invertida: ");
     // Invertendo a instring.
-    for (i = count - 1; i >= 0; i--)
+    for (i = 0; i < n; i++)
     {
-        printf("%c", str[i]);
+        strInv[i] = str[j];
+        j--;
     }
+    printf("\nStrInv: %s\n", strInv);
+    strcpy(str, strInv);
 }
 
 // Criando a função principal que le a string a ser invertida.
@@ -23,11 +25,13 @@ int main(int argc, char const *argv[])
 {
     char str[TAM];
 
-    printf("Digite a String a ser invertida: ");
+    printf("\nDigite a String a ser invertida: ");
     fgets(str, TAM, stdin);
 
-    //Chamando a funçao que inverte a string.
-   strinv(str);
+    // Chamando a funçao que inverte a string.
+    strinv(str);
+
+    printf("\nString invertida: %s\n\n", str);
 
     return 0;
 }
