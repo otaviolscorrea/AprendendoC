@@ -5,32 +5,32 @@
 //#include <time.h>
 //#define count 5
 
-void maiorPar(int *vetor, int n)
+void maiorPar(int *vetor, int n, int *maiorP)
 {
-    int i, maiorP = -999999;
+    int i;
 
     for (i = 0; i < n; i++)
     {
         if (vetor[i] % 2 == 0)
         {
-            if (vetor[i] > maiorP)
+            if (vetor[i] > *maiorP)
             {
-                maiorP = vetor[i];
+                *maiorP = vetor[i];
             }
         }
     }
 }
-void menorImpar(int *vetor, int n)
+void menorImpar(int *vetor, int n, int *menorI)
 {
-    int i, menorI = 999999;
+    int i;
 
     for (i = 0; i < n; i++)
     {
         if (vetor[i] % 2 != 0)
         {
-            if (vetor[i] < menorI)
+            if (vetor[i] < *menorI)
             {
-                menorI = vetor[i];
+                *menorI = vetor[i];
             }
         }
     }
@@ -38,7 +38,7 @@ void menorImpar(int *vetor, int n)
 
 int main(int argc, char const *argv[])
 {
-    int n, maiorP, menorI;
+    int n, *maiorP = -999999, *menorI = 999999;
 
     printf("Digite o tamanho do vetor: ");
     scanf("%d", &n);
@@ -50,12 +50,11 @@ int main(int argc, char const *argv[])
         printf("Posicao %d: ", i);
         scanf("%d", &vetor[i]);
     }
+    maiorPar(vetor, n, maiorP);
+    menorImpar(vetor, n, menorI);
 
-    maiorP = maiorPar(vetor, n);
-    menorI = menorImpar(vetor, n);
-
-    printf("O maior Par eh: %d", maiorP);
-    printf("O menor Impar eh: %d", menorI);
+    printf("\nO maior Par eh: %d", maiorP);
+    printf("\nO menor Impar eh: %d", menorI);
 
     return 0;
 }
