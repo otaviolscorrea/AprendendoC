@@ -1,13 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
-//#include <string.h>
-//#include <math.h>
-//#include <time.h>
-//#define count 5
 
 void maiorPar(int *vetor, int n, int *maiorP)
 {
-    int i;
+    int i, valor = -999999;
+    *maiorP = valor;
 
     for (i = 0; i < n; i++)
     {
@@ -22,7 +19,8 @@ void maiorPar(int *vetor, int n, int *maiorP)
 }
 void menorImpar(int *vetor, int n, int *menorI)
 {
-    int i;
+    int i, valor = 999999;
+    *menorI = valor;
 
     for (i = 0; i < n; i++)
     {
@@ -38,7 +36,7 @@ void menorImpar(int *vetor, int n, int *menorI)
 
 int main(int argc, char const *argv[])
 {
-    int n, *maiorP = -999999, *menorI = 999999;
+    int n, maiorP, menorI;
 
     printf("Digite o tamanho do vetor: ");
     scanf("%d", &n);
@@ -50,11 +48,11 @@ int main(int argc, char const *argv[])
         printf("Posicao %d: ", i);
         scanf("%d", &vetor[i]);
     }
-    maiorPar(vetor, n, maiorP);
-    menorImpar(vetor, n, menorI);
+    maiorPar(vetor, n, &maiorP);
+    menorImpar(vetor, n, &menorI);
 
     printf("\nO maior Par eh: %d", maiorP);
-    printf("\nO menor Impar eh: %d", menorI);
+    printf("\nO menor Impar eh: %d\n\n", menorI);
 
     return 0;
 }
